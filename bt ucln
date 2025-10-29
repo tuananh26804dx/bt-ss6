@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    // Nhập hai số nguyên từ bàn phím
+    printf("Nhap a: ");
+    scanf("%d", &a);
+    printf("Nhap b: ");
+    scanf("%d", &b);
+
+    int c = a, d = b; // sao chép a, b để giữ nguyên giá trị ban đầu
+    int r = c % d;    // tính phần dư của c chia d
+
+    // Thuật toán Euclid: lặp cho đến khi phần dư = 0
+    while (r != 0) {
+        c = d;   // gán d thành c
+        d = r;   // gán phần dư thành d
+        r = c % d; // tính phần dư mới
+    }
+
+    // Khi vòng lặp kết thúc, d là UCLN
+    printf("UCLN cua %d va %d la: %d\n", a, b, d);
+
+    return 0;
+}
