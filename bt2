@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    // In tiêu đề
+    printf("Cac so chan tu 1 den 100 la:\n");
+
+    int dem = 0; // Biến đếm số lượng số chẵn
+
+    // Vòng lặp bắt đầu từ 2 và mỗi lần tăng thêm 2
+    for (int i = 2; i <= 100; i += 2) {
+        dem++; // Mỗi lần gặp số chẵn thì tăng biến đếm lên 1
+        printf("%5d", i); // In ra số chẵn, mỗi số cách nhau 5 ký tự cho đẹp
+    }
+
+    // Xuống 2 dòng rồi in tổng số lượng số chẵn
+    printf("\n\nCo %d so chan.\n", dem);
+
+    return 0;
+}
