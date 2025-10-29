@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    printf("Cac dap an co the:\n\n");
+
+    // Vòng lặp thử số lượng gà từ 1 đến 50
+    for (int ga = 1; ga <= 50; ga++) {
+        // Vòng lặp thử số lượng chó từ 1 đến 25
+        for (int cho = 1; cho <= 25; cho++) {
+            // Nếu tổng tiền = 100 (gà 2 đồng, chó 4 đồng)
+            if (ga * 2 + cho * 4 == 100) {
+                printf("%d ga, %d cho\n", ga, cho);
+            }
+        }
+    }
+
+    return 0;
+}
