@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    printf("Cac truong hop co the xay ra, su dung 1 vong lap for duy nhat:\n\n");
+
+    int dog; // biến lưu số lượng chó
+
+    // Duyệt số lượng gà từ 1 đến 49
+    for (int chicken = 1; chicken <= 49; chicken++) {
+        // Tính số chó từ tổng tiền còn lại
+        dog = (100 - chicken * 2) / 4;
+
+        // Kiểm tra điều kiện tổng tiền đúng 100 đồng
+        if ((chicken * 2 + dog * 4) == 100) {
+            printf("%d ga, %d cho\n", chicken, dog);
+        }
+    }
+
+    return 0;
+}
