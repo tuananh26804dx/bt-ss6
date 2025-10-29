@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int n;
+
+    // Nhập n > 0
+    do {
+        printf("Nhap vao n nguyen duong: ");
+        scanf("%d", &n);
+        if (n < 1) {
+            printf("Nhap lai n!\n");
+        }
+    } while (n < 1);
+
+    float A = 1.0; // Khởi tạo tổng A = 1
+    long giaithua;
+    int mu;
+
+    // Vòng lặp từ i = 2 đến n
+    for (int i = 2; i <= n; i++) {
+        // Tính (-1)^(i-1)
+        mu = (i % 2 == 0) ? 1 : -1; // thay cho pow(-1, i-1) cho nhanh hơn
+
+        // Tính giai thừa i!
+        giaithua = 1;
+        for (int j = 1; j <= i; j++) {
+            giaithua *= j;
+        }
+
+        // Cộng vào tổng A
+        A += (float)mu / giaithua;
+    }
+
+    printf("Gia tri can tinh A = %.2f\n", A);
+
+    return 0;
+}
